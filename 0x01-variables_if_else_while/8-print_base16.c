@@ -1,28 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
- * main - Entry Points
+ * main - Prints all the numbers of base 16 in lowercase.
  *
- * Description: program that prints all possible
- * combinations of single-digit numbers
- *
- * Return: Always 0 (Success)
- */
+ * Return: Always 0.
+*/
 int main(void)
-{char c;
-int d;
-c = 'a';
-d = '0';
-while
-(d < 10) {
-putchar(d + '0');
-c++;
-}
-while
-(c <= 'f') {
-putchar(c);
-c++;
-}
+{
+int num;
+char letter;
+for (num = 0; num < 10; num++)
+putchar((num % 10) + '0');
+for (letter = 'a'; letter <= 'f'; letter++)
+putchar(letter);
 putchar('\n');
 return (0);
 }
-
