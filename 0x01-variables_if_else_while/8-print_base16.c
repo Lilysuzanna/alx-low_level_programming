@@ -8,18 +8,21 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{int num;
-for (num = 48; num < 58; num++)
-{
-putchar(num);
-if (num != 57)
-{
-putchar(',');
-putchar(' ');
+{char c;
+int d;
+c = 'a';
+d = '0';
+while
+(d < 10) {
+putchar(d + '0');
+c++;
 }
+while
+(c <= 'f') {
+putchar(c);
+c++;
 }
 putchar('\n');
 return (0);
 }
-
 
