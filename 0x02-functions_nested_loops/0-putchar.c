@@ -14,6 +14,6 @@ _putchar('h');
 _putchar('a');
 _putchar('r');
 
-printf("\n")
+printf("\n");
 return (0);
 }
