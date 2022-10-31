@@ -1,31 +1,33 @@
-#include "main.h"
-/**
- * print_number - a function that prints an integer.
- * @n: Number to print
- * Return: Nothing
- */
-
-void print_number(int n)
+#include <stdio.h>
+int main(void)
 
 {
 
-	unsigned int x;
-if (n < 0)
+int n;
 
-	{
+int a[5];
 
-_putchar('-');
+int *p;
 
-		n *= -1;
+a[2] = 1024;
 
-	}
+p = &n;
 
-	x = n;
+/*
+ * write your line of code here...
+ * Remember:
+ * - you are not allowed to use a
+ * - you are not allowed to modify p
+ * - only one statement
+ * - you are not allowed to code anything else than this line of code
+*/
 
-	if (x / 10)
+*(p + 5) = 98;
 
-		print_number(x / 10);
+/* ...so that this prints 98\n */
 
-	_putchar(x % 10 + '0');
+printf("a[2] = %d\n", a[2]);
+
+return (0);
 
 }
