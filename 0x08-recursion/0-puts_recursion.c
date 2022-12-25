@@ -2,7 +2,7 @@
 /**
  * _puts_recursion - print a string
  * @s: string
- * done by emmygreat
+ * done by Suzette
  * Return: void
  */
 void _puts_recursion(char *s)
