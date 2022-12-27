@@ -1,41 +1,49 @@
+/*
+ * File: 7-is_palindrome.c
+ * Auth: Anyadike Suzette
+ */
+
 #include "main.h"
-/**
- * _strlen_recursion - prints the length of a string
- * @s: string to be printed
- * Return: length of the string
- */
-int _strlen_recursion(char *s)
-{
-	if (s[0] != '\0')
-		return (1 + _strlen_recursion(s + 1));
-	return (0);
-}
 
 /**
- * pal_checker - checks if s is palindrome
- * @s: string base address
- * @i: left index
- * @j: right index
- * Return: 1 if s is palindrome, 0 otherwise
- */
-int pal_checker(char *s, int i, int j)
+  * ispalindrome - wrapper function to check for palindrome.
+  * @s: string.
+  * @i: integer pointing the beginning.
+  * @j: integer pointing the end.
+  * Return: 1 if palindrom, 0 otherwise.
+  */
+int ispalindrome(char *s, int i, int j)
 {
-	if (S[i] == s[j])
-		if (i < j / 2)
-			return (1);
-		else
-			return (pal_checker(s, i + 1, j - 1));
-	else
+	if (i == j)
+		return (1);
+	else if (s[i] != s[j])
 		return (0);
+	if (i < j)
+		return (ispalindrome(s, i + 1, j - 1));
+	return (1);
 }
-
 /**
- * is_palindrome - check if s is palindrome
- * @s: base string address for string
- * done by suzette
- * Return: 1
+ * is_palindrome - returns 1 if string is palindrome, 0 if not.
+ *
+ * @s: string.
+ * Return: 1 if palindrome 0 if not.
  */
 int is_palindrome(char *s)
 {
-	return (pal_checker(s, 0, _strlen_recursioni(s) - 1));
+	if (!*s)
+		return (1);
+	return (ispalindrome(s, 0, _strlen_recursion(s) - 1));
+}
+
+/**
+ * _strlen_recursion - prints a string.
+ *
+ * @s: string.
+ * Return: length of a string.
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
