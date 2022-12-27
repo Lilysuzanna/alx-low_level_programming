@@ -1,23 +1,22 @@
-i/*
- * File: 2-args.c
- * Auth: Suzette
- */
-
 #include <stdio.h>
 
 /**
- * main - Prints all arguments it receives.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - prints its name
  *
- * Return: Always 0.
+ * @argc: number of imputs
+ * @argv: array
+ * Return: Always 0
  */
+
 int main(int argc, char *argv[])
 {
-	int arg;
+	int i = 0;
 
-	for (arg = 0; arg < argc; arg++)
-		printf("%s\n", argv[arg]);
+	while (i < argc)
+	{
+		printf("%s\n", argv[i]);
+		i++;
+	}
 
 	return (0);
 }
